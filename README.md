@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+### `ELS Description`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ELS (Ethereum Listing Service) is a fully decentralized on-chain listing protocol that operates on the Ethereum blockchain. ELS is designed to be permissionless, decentralized, and operated by a DAO (Decentralized Autonomous Organization).
 
-## Available Scripts
+Through ELS, users can post any type of information on the ELS smart contract, including jobs, product sales, and more. The DAO members are responsible for proposing and finalizing new categories or managing invalid information.
 
-In the project directory, you can run:
+With the use of ERC6150, a B+ tree structure, ELS can maintain a dynamic set of smart contracts that represent various layers of categorization, enabling users to locate the information they need accurately.
 
-### `npm start`
+As the volume of listing data grows, ELS plans to move the listing data from the L1 smart contract into the Ethereum native storage layer, ethStorage, or IPFS. However, the Categories B+ tree and the DAO will remain on Ethereum Layer1 to ensure decentralization.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `Installation`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install\
+npm start\
+Open http://localhost:3000/management to view DAO Management page in the brower.\
+Open http://localhost:3000/categories to view Category page in the brower.
 
-### `npm test`
+In DAO Management page, DAO admin is able to add categories.\
+In Category page, user can post items in any category. User may click category to check all items in that category.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Use Case`
+When a user wants to post an item, they could choose which categories they wish to locate their information.  On the other side, another user could search and index their needs quickly. 
 
-### `npm run build`
+In the aspect of storage, the categories will be stored on the Layer 1 blockchain. For the actual instances, they will be stored on ifps or layer 2 storage solution like EthStorage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Summary`
+ELS implements ERC6150, a hierarchical B+ tree-like structure, to maintain a dynamic set of smart contracts that represent various layers of categorization. This enables users to accurately locate the information they need easily.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+As the volume of listing data grows, ELS plans to move its storage from the L1 smart contract to the Ethereum native storage layer, EthStorage. The categories structure will remain on Ethereum Layer 1 to ensure decentralization.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Moreover, ELS solves the problem of centralization in categorization, which can lead to bias and unfairness in how information is presented and accessed. With ELS, users can easily add new categories or update existing ones through the DAO governance model, making the categorization process more efficient and equitable.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Overall, ELS is an on-chain listing protocol that solves critical challenges of organizing and categorizing information on the blockchain. With its decentralized and community-driven approach, ELS offers a transparent and decentralized platform for listing any data including products, services, and job postings, paying the way for a fairer and more efficient economy.
